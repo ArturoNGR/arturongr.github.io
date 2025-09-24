@@ -3,56 +3,113 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Arturo de Nieves — Portfolio</title>
 <style>
-:root{--bg:#0b0f14;--fg:#e6edf3;--muted:#9fb0c0;--card:#121821;--accent:#7cc7ff}
+/* ==== Theme & typography ==== */
+:root{
+  --bg:#0b0f14; --card:#121821; --line:#1b2533; --ink:#e6edf3; --muted:#9fb0c0; --accent:#7cc7ff;
+  --muted-2:#7f8da0; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-.container{max-width:980px;margin:0 auto;padding:32px}
-.header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:24px}
-.brand h1{margin:0;font-size:28px}
-.tag{color:var(--muted);font-size:16px;margin-top:6px}
+html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at -10% -20%,rgba(124,199,255,.10),transparent 60%),var(--bg);
+  color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1050px;margin:0 auto;padding:28px}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+
+/* ==== Header / hero ==== */
+.header{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:18px}
+.brand h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px}
+.brand .tag{color:var(--muted);font-size:16px}
+.meta{color:var(--muted-2);font-size:13px;margin-top:4px}
 .actions{display:flex;flex-wrap:wrap;gap:10px}
-.button{display:inline-block;padding:10px 14px;border-radius:10px;background:#1b2430;color:var(--fg);border:1px solid #243142}
-.button.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
-.card{background:var(--card);border:1px solid #1b2533;border-radius:14px;padding:16px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);
+  background:#182230;color:var(--ink);text-decoration:none;box-shadow:none;transition:.15s transform,.15s box-shadow,.15s background}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
+.btn .arrow{font-weight:700}
+
+/* ==== Cards & sections ==== */
+.section{margin-top:22px}
+.card{background:linear-gradient(180deg,rgba(124,199,255,.06),transparent 50%),var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h2{margin:0 0 8px;font-size:20px}
+.card p{margin:6px 0 0}
+
+/* ==== Link pills ==== */
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.linkpill{padding:8px 12px;border-radius:999px;border:1px solid #243142;background:#121821;color:var(--fg);font-size:14px}
-.section h2{font-size:18px;margin:20px 0 8px}
-.small{color:var(--muted);font-size:13px}
-.footer{margin-top:32px;padding-top:12px;border-top:1px solid #1b2533;color:var(--muted);font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:999px;border:1px solid var(--line);
+  background:#0f1621; color:var(--ink); font-size:14px; transition:.15s transform,.15s background,.15s border-color}
+.pill:hover{transform:translateY(-1px);background:#141d2a;border-color:#2a3850}
+.icon{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#0e1520;border:1px solid #223046;font-size:12px;color:var(--muted)}
+
+/* ==== List styling ==== */
+ul.clean{padding-left:18px;margin:8px 0 0}
+ul.clean li{margin:6px 0}
+
+/* ==== Footer ==== */
+.footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+/* ==== Responsive tweaks ==== */
+@media (max-width:720px){
+  .brand h1{font-size:28px}
+  .header{grid-template-columns:1fr}
+  .actions{justify-content:flex-start}
+  .container{padding:22px}
+}
 </style>
+
 <body>
 <div class="container">
+
+  <!-- Header / Hero -->
   <header class="header">
     <div class="brand">
       <h1>Arturo de Nieves, PhD</h1>
       <div class="tag">Policy analyst · Computational social science · Integrity analytics</div>
-      <div class="small">Geneva · arturodenieves@gmail.com · EN/FR/ES/PT/IT</div>
+      <div class="meta">Geneva · <a href="mailto:arturodenieves@gmail.com">arturodenieves@gmail.com</a> · EN/FR/ES/PT/IT</div>
     </div>
     <nav class="actions">
-      <!-- Upload your PDF to the repo root as cv.pdf -->
-      <a class="button primary" href="/cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-      <a class="button" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
+      <!-- Make sure cv.pdf exists at the repo root -->
+      <a class="btn primary" href="/cv.pdf" target="_blank" rel="noopener">
+        Download CV <span class="arrow">↗</span>
+      </a>
+      <a class="btn" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
-  <section class="card">
+  <!-- Links -->
+  <section class="section card">
     <h2>Professional Links</h2>
     <div class="links">
-      <a class="linkpill" href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="linkpill" href="https://orcid.org/0000-0002-2574-5098" target="_blank" rel="noopener">ORCID</a>
-      <a class="linkpill" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
-      <!-- Use &amp; to encode & in the Scholar URL -->
-      <a class="linkpill" href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="linkpill" href="https://coruna.academia.edu/ArturoDeNievesGutiérrezdeRubalcavaPhD" target="_blank" rel="noopener">Academia.edu</a>
-      <a class="linkpill" href="https://www.webofscience.com/wos/author/record/NQE-6143-2025" target="_blank" rel="noopener">Web of Science ResearcherID</a>
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/">
+        <span class="icon">in</span> LinkedIn
+      </a>
+      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098">
+        <span class="icon">ID</span> ORCID
+      </a>
+      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR">
+        <span class="icon">GH</span> GitHub
+      </a>
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao">
+        <span class="icon">S</span> Google Scholar
+      </a>
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://coruna.academia.edu/ArturoDeNievesGuti%C3%A9rrezdeRubalcavaPhD">
+        <span class="icon">A</span> Academia.edu
+      </a>
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://www.webofscience.com/wos/author/record/NQE-6143-2025">
+        <span class="icon">W</span> Web of Science
+      </a>
     </div>
   </section>
 
-  <section class="card">
+  <!-- Highlights -->
+  <section class="section card">
     <h2>Highlights</h2>
-    <ul>
+    <ul class="clean">
       <li>BGM toolkits for allocation problems; PISA applications with leak-free validation.</li>
       <li>Integrity analytics: anomaly flags, partner risk scoring, internal-control checklists.</li>
       <li>Partner oversight and audit-readiness templates linking budgets to KPIs.</li>
