@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arturo de Nieves — Portfolio</title>
+<style>
+:root{--bg:#0b0f14;--fg:#e6edf3;--muted:#9fb0c0;--card:#121821;--accent:#7cc7ff}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.container{max-width:980px;margin:0 auto;padding:32px}
+.header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.brand h1{margin:0;font-size:28px}
+.tag{color:var(--muted);font-size:16px;margin-top:6px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.button{display:inline-block;padding:10px 14px;border-radius:10px;background:#1b2430;color:var(--fg);border:1px solid #243142}
+.button.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
+.card{background:var(--card);border:1px solid #1b2533;border-radius:14px;padding:16px;margin-top:18px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.linkpill{padding:8px 12px;border-radius:999px;border:1px solid #243142;background:#121821;color:var(--fg);font-size:14px}
+.section h2{font-size:18px;margin:20px 0 8px}
+.small{color:var(--muted);font-size:13px}
+.footer{margin-top:32px;padding-top:12px;border-top:1px solid #1b2533;color:var(--muted);font-size:13px}
+</style>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand">
+      <h1>Arturo de Nieves, PhD</h1>
+      <div class="tag">Policy analyst · Computational social science · Integrity analytics</div>
+      <div class="small">Geneva · arturodenieves@gmail.com · EN/FR/ES/PT/IT</div>
+    </div>
+    <nav class="actions">
+      <!-- Upload your PDF to the repo root as cv.pdf -->
+      <a class="button primary" href="/cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+      <a class="button" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>Professional Links</h2>
+    <div class="links">
+      <a class="linkpill" href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="linkpill" href="https://orcid.org/0000-0002-2574-5098" target="_blank" rel="noopener">ORCID</a>
+      <a class="linkpill" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
+      <!-- Use &amp; to encode & in the Scholar URL -->
+      <a class="linkpill" href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="linkpill" href="https://coruna.academia.edu/ArturoDeNievesGutiérrezdeRubalcavaPhD" target="_blank" rel="noopener">Academia.edu</a>
+      <a class="linkpill" href="https://www.webofscience.com/wos/author/record/NQE-6143-2025" target="_blank" rel="noopener">Web of Science ResearcherID</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Highlights</h2>
+    <ul>
+      <li>BGM toolkits for allocation problems; PISA applications with leak-free validation.</li>
+      <li>Integrity analytics: anomaly flags, partner risk scoring, internal-control checklists.</li>
+      <li>Partner oversight and audit-readiness templates linking budgets to KPIs.</li>
+    </ul>
+  </section>
+
+  <footer class="footer">© Arturo de Nieves</footer>
+</div>
+</body>
+</html>
