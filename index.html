@@ -60,6 +60,22 @@ ul.clean li{margin:6px 0}
   .actions{justify-content:flex-start}
   .container{padding:22px}
 }
+/* Projects & Publications */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.proj h3{margin:0 0 4px;font-size:18px}
+.proj .meta{color:var(--muted);font-size:13px;margin:0 0 8px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{font-size:12px;border:1px solid #243142;padding:4px 8px;border-radius:999px;color:var(--muted)}
+
+.table{width:100%;border-collapse:collapse;margin-top:6px}
+.table th,.table td{border-bottom:1px solid #223046;padding:10px 8px;text-align:left;font-size:14px}
+.table th{color:var(--muted)}
+
+  
 </style>
 
 <body>
