@@ -3,7 +3,6 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Arturo de Nieves — Portfolio</title>
 <style>
-/* ==== Theme & typography ==== */
 :root{
   --bg:#0b0f14; --card:#121821; --line:#1b2533; --ink:#e6edf3; --muted:#9fb0c0; --accent:#7cc7ff;
   --muted-2:#7f8da0; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
@@ -14,42 +13,47 @@ html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at -10% -20
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1050px;margin:0 auto;padding:28px}
-hr{border:0;border-top:1px solid var(--line);margin:18px 0}
-
-/* ==== Header / hero ==== */
 .header{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:18px}
 .brand h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px}
 .brand .tag{color:var(--muted);font-size:16px}
 .meta{color:var(--muted-2);font-size:13px;margin-top:4px}
 .actions{display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);
-  background:#182230;color:var(--ink);text-decoration:none;box-shadow:none;transition:.15s transform,.15s box-shadow,.15s background}
+  background:#182230;color:var(--ink);text-decoration:none;transition:.15s transform,.15s box-shadow,.15s background}
 .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
 .btn.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
 .btn .arrow{font-weight:700}
 
-/* ==== Cards & sections ==== */
 .section{margin-top:22px}
 .card{background:linear-gradient(180deg,rgba(124,199,255,.06),transparent 50%),var(--card);
   border:1px solid var(--line);border-radius:var(--radius);padding:18px}
 .card h2{margin:0 0 8px;font-size:20px}
-.card p{margin:6px 0 0}
 
-/* ==== Link pills ==== */
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:999px;border:1px solid var(--line);
-  background:#0f1621; color:var(--ink); font-size:14px; transition:.15s transform,.15s background,.15s border-color}
+  background:#0f1621;color:var(--ink);font-size:14px;transition:.15s transform,.15s background,.15s border-color}
 .pill:hover{transform:translateY(-1px);background:#141d2a;border-color:#2a3850}
 .icon{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#0e1520;border:1px solid #223046;font-size:12px;color:var(--muted)}
 
-/* ==== List styling ==== */
 ul.clean{padding-left:18px;margin:8px 0 0}
 ul.clean li{margin:6px 0}
 
-/* ==== Footer ==== */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.proj h3{margin:0 0 4px;font-size:18px}
+.proj .meta{color:var(--muted);font-size:13px;margin:0 0 8px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{font-size:12px;border:1px solid #243142;padding:4px 8px;border-radius:999px;color:var(--muted)}
+
+.table{width:100%;border-collapse:collapse;margin-top:6px}
+.table th,.table td{border-bottom:1px solid #223046;padding:10px 8px;text-align:left;font-size:14px}
+.table th{color:var(--muted)}
+
 .footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 
-/* ==== Responsive tweaks ==== */
 @media (max-width:720px){
   .brand h1{font-size:28px}
   .header{grid-template-columns:1fr}
@@ -61,7 +65,6 @@ ul.clean li{margin:6px 0}
 <body>
 <div class="container">
 
-  <!-- Header / Hero -->
   <header class="header">
     <div class="brand">
       <h1>Arturo de Nieves, PhD</h1>
@@ -69,44 +72,75 @@ ul.clean li{margin:6px 0}
       <div class="meta">Geneva · <a href="mailto:arturodenieves@gmail.com">arturodenieves@gmail.com</a> · EN/FR/ES/PT/IT</div>
     </div>
     <nav class="actions">
-      <!-- Make sure cv.pdf exists at the repo root -->
-      <a class="btn primary" href="/cv.pdf" target="_blank" rel="noopener">
-        Download CV <span class="arrow">↗</span>
-      </a>
+      <a class="btn primary" href="/cv.pdf" target="_blank" rel="noopener">Download CV <span class="arrow">↗</span></a>
       <a class="btn" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
-  <!-- Links -->
   <section class="section card">
     <h2>Professional Links</h2>
     <div class="links">
       <a class="pill" target="_blank" rel="noopener"
-         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/">
-        <span class="icon">in</span> LinkedIn
-      </a>
-      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098">
-        <span class="icon">ID</span> ORCID
-      </a>
-      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR">
-        <span class="icon">GH</span> GitHub
-      </a>
+         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/"><span class="icon">in</span> LinkedIn</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098"><span class="icon">ID</span> ORCID</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR"><span class="icon">GH</span> GitHub</a>
       <a class="pill" target="_blank" rel="noopener"
-         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao">
-        <span class="icon">S</span> Google Scholar
-      </a>
+         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao"><span class="icon">S</span> Google Scholar</a>
       <a class="pill" target="_blank" rel="noopener"
-         href="https://coruna.academia.edu/ArturoDeNievesGuti%C3%A9rrezdeRubalcavaPhD">
-        <span class="icon">A</span> Academia.edu
-      </a>
+         href="https://coruna.academia.edu/ArturoDeNievesGuti%C3%A9rrezdeRubalcavaPhD"><span class="icon">A</span> Academia.edu</a>
       <a class="pill" target="_blank" rel="noopener"
-         href="https://www.webofscience.com/wos/author/record/NQE-6143-2025">
-        <span class="icon">W</span> Web of Science
-      </a>
+         href="https://www.webofscience.com/wos/author/record/NQE-6143-2025"><span class="icon">W</span> Web of Science</a>
     </div>
   </section>
 
-  <!-- Highlights -->
+  <!-- Featured projects -->
+  <section class="section">
+    <h2>Featured projects</h2>
+    <div class="grid">
+      <div class="proj">
+        <h3>Logistic BGM+ on PISA</h3>
+        <div class="meta">Predictive matching of students to schools using E/C/S capitals</div>
+        <p>Country-level models with high AUC and P@1. Leak-free pipelines (student-grouped splits), validation suite, and synthetic demo. Private data/code remain private.</p>
+        <div class="badges"><span class="badge">AUC≈0.99</span><span class="badge">Leak-free</span><span class="badge">Validation</span></div>
+      </div>
+      <div class="proj">
+        <h3>Integrity Analytics Toolkit</h3>
+        <div class="meta">Controls, fraud risk, audit readiness</div>
+        <p>Python/R rulesets for anomaly flags, partner risk registers, and internal-control checklists. Designed for handover to public administrations.</p>
+        <div class="badges"><span class="badge">Controls</span><span class="badge">Risk</span><span class="badge">Audit</span></div>
+      </div>
+      <div class="proj">
+        <h3>Partner Oversight Toolkit</h3>
+        <div class="meta">Due diligence · KPI-linked budgeting · Compliance dashboards</div>
+        <p>Standardised templates and dashboards improving on-time reporting and audit readiness across multi-country operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="section">
+    <h2>Publications (selected)</h2>
+    <table class="table">
+      <tr><th>Year</th><th>Title</th><th>Outlet</th></tr>
+      <tr>
+        <td>2025</td>
+        <td>Beyond Rational Choice: A Neo-Bourdieusian Gravity Model of Social Practice</td>
+        <td>Acta Sociologica</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>Modeling Population Movements under Uncertainty at the Border</td>
+        <td>arXiv</td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>A New Index for Monitoring Local Policies on Active Ageing in the EU (AAI_locp)</td>
+        <td>Revista Española de Investigaciones Sociológicas (REIS)</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Highlights (optional keep) -->
   <section class="section card">
     <h2>Highlights</h2>
     <ul class="clean">
