@@ -43,6 +43,7 @@ a:hover{text-decoration:underline}
   border:1px solid var(--line);border-radius:var(--radius);padding:18px
 }
 .card h2{margin:0 0 8px;font-size:20px}
+.card p{margin:0}
 
 /* Link pills */
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
@@ -85,40 +86,55 @@ ul.clean li{margin:6px 0}
 <body>
 <div class="container">
 
-  <!-- Header -->
   <header class="header">
     <div class="brand">
       <h1>Arturo de Nieves, PhD</h1>
-      <div class="tag">Policy analyst · Computational social science · Integrity analytics</div>
+      <div class="tag">Strategy & Operations · Decision Intelligence · Business Analytics</div>
       <div class="meta">Geneva · <a href="mailto:arturodenieves@gmail.com">arturodenieves@gmail.com</a> · EN/FR/ES/PT/IT</div>
     </div>
     <nav class="actions">
-      <a class="btn primary" href="/cv.pdf" target="_blank" rel="noopener">Download CV <span class="arrow">↗</span></a>
+      <a class="btn primary" href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md" target="_blank" rel="noopener">Ethiopia pilot <span class="arrow">↗</span></a>
+      <a class="btn" href="mailto:arturodenieves@gmail.com">Contact</a>
       <a class="btn" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
-  <!-- Links -->
   <section class="section card">
-    <h2>Professional Links</h2>
+    <h2>Featured: Ethiopia pilot (BGM applied)</h2>
+    <p>Evidence pack demonstrating the Bourdieusian Gravity Model (BGM) as an interpretable predictive framework for forecasting dyadic choices and behaviour in complex environments.</p>
     <div class="links">
       <a class="pill" target="_blank" rel="noopener"
-         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/"><span class="icon">in</span> LinkedIn</a>
-      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098"><span class="icon">ID</span> ORCID</a>
-      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR"><span class="icon">GH</span> GitHub</a>
+         href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Ethiopia technical evidence pack</a>
       <a class="pill" target="_blank" rel="noopener"
-         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao"><span class="icon">S</span> Google Scholar</a>
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://coruna.academia.edu/ArturoDeNievesGuti%C3%A9rrezdeRubalcavaPhD"><span class="icon">A</span> Academia.edu</a>
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://www.webofscience.com/wos/author/record/NQE-6143-2025"><span class="icon">W</span> Web of Science</a>
+         href="https://journals.sagepub.com/doi/10.1177/00016993251344175"><span class="icon">P</span> BGM paper (Acta Sociologica, 2025)</a>
     </div>
   </section>
 
-  <!-- Featured projects -->
+  <section class="section card">
+    <h2>Professional links</h2>
+    <div class="links">
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/"><span class="icon">in</span> LinkedIn</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR"><span class="icon">GH</span> GitHub</a>
+      <a class="pill" target="_blank" rel="noopener"
+         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao"><span class="icon">S</span> Google Scholar</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098"><span class="icon">ID</span> ORCID</a>
+    </div>
+  </section>
+
   <section class="section">
     <h2>Featured projects</h2>
     <div class="grid">
+      <div class="proj">
+        <h3>Ethiopia pilot (BGM applied)</h3>
+        <div class="meta">Interpretable forecasting of dyadic choices · Evidence pack</div>
+        <p>Applied case study and technical evidence demonstrating modelling, validation, and practical decision-support artefacts.</p>
+        <div class="badges"><span class="badge">Applied</span><span class="badge">Interpretable</span><span class="badge">Evidence pack</span></div>
+        <div class="links" style="margin-top:10px">
+          <a class="pill" target="_blank" rel="noopener"
+             href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Open</a>
+        </div>
+      </div>
       <div class="proj">
         <h3>Logistic BGM+ on PISA</h3>
         <div class="meta">Predictive matching of students to schools using E/C/S capitals</div>
@@ -128,18 +144,12 @@ ul.clean li{margin:6px 0}
       <div class="proj">
         <h3>Integrity Analytics Toolkit</h3>
         <div class="meta">Controls, fraud risk, audit readiness</div>
-        <p>Python/R rulesets for anomaly flags, partner risk registers, and internal-control checklists. Designed for handover to public administrations.</p>
+        <p>Rulesets for anomaly flags, partner risk registers, and internal-control checklists. Designed for handover to public administrations.</p>
         <div class="badges"><span class="badge">Controls</span><span class="badge">Risk</span><span class="badge">Audit</span></div>
-      </div>
-      <div class="proj">
-        <h3>Partner Oversight Toolkit</h3>
-        <div class="meta">Due diligence · KPI-linked budgeting · Compliance dashboards</div>
-        <p>Standardised templates and dashboards improving on-time reporting and audit readiness across multi-country operations.</p>
       </div>
     </div>
   </section>
 
-  <!-- Publications -->
   <section class="section">
     <h2>Publications (selected)</h2>
     <table class="table">
@@ -168,13 +178,12 @@ ul.clean li{margin:6px 0}
     </table>
   </section>
 
-  <!-- Highlights -->
   <section class="section card">
     <h2>Highlights</h2>
     <ul class="clean">
-      <li>BGM toolkits for allocation problems; PISA applications with leak-free validation.</li>
-      <li>Integrity analytics: anomaly flags, partner risk scoring, internal-control checklists.</li>
-      <li>Partner oversight and audit-readiness templates linking budgets to KPIs.</li>
+      <li>Creator of the Bourdieusian Gravity Model (BGM), published in Acta Sociologica (2025).</li>
+      <li>Ethiopia pilot: applied, interpretable forecasting of dyadic choices with a full evidence pack.</li>
+      <li>Integrity analytics and oversight toolkits supporting audit readiness and operational performance.</li>
     </ul>
   </section>
 
