@@ -1,87 +1,98 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arturo de Nieves — Portfolio</title>
-<link rel="canonical" href="https://arturongr.github.io/">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<style>
-:root{
-  --bg:#0b0f14; --card:#121821; --line:#1b2533; --ink:#e6edf3; --muted:#9fb0c0; --accent:#7cc7ff;
-  --muted-2:#7f8da0; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
-}
-*{box-sizing:border-box}
-html,body{
-  margin:0;padding:0;
-  background:radial-gradient(1200px 600px at -10% -20%,rgba(124,199,255,.10),transparent 60%),var(--bg);
-  color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6
-}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:1050px;margin:0 auto;padding:28px}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arturo de Nieves — Portfolio</title>
+  <link rel="canonical" href="https://arturongr.github.io/">
 
-/* Header */
-.header{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:18px}
-.brand h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px}
-.brand .tag{color:var(--muted);font-size:16px}
-.meta{color:var(--muted-2);font-size:13px;margin-top:4px}
-.actions{display:flex;flex-wrap:wrap;gap:10px}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);
-  background:#182230;color:var(--ink);text-decoration:none;transition:.15s transform,.15s box-shadow,.15s background
-}
-.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-.btn.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
-.btn .arrow{font-weight:700}
+  <meta name="description" content="Arturo de Nieves, PhD — Strategy & Operations, Transformation, and Decision Intelligence. Creator of the Bourdieusian Gravity Model (BGM), published in Acta Sociologica (2025). Applied evidence packs and analytics toolkits for high-stakes decisions.">
 
-/* Cards & sections */
-.section{margin-top:22px}
-.card{
-  background:linear-gradient(180deg,rgba(124,199,255,.06),transparent 50%),var(--card);
-  border:1px solid var(--line);border-radius:var(--radius);padding:18px
-}
-.card h2{margin:0 0 8px;font-size:20px}
-.card p{margin:0}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arturo de Nieves, PhD — Strategy & Operations · Decision Intelligence">
+  <meta property="og:description" content="Interpretable decision models and operational toolkits for high-stakes strategy and execution. BGM (Acta Sociologica, 2025) and applied evidence packs.">
+  <meta property="og:url" content="https://arturongr.github.io/">
 
-/* Link pills */
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.pill{
-  display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:999px;border:1px solid var(--line);
-  background:#0f1621;color:var(--ink);font-size:14px;transition:.15s transform,.15s background,.15s border-color
-}
-.pill:hover{transform:translateY(-1px);background:#141d2a;border-color:#2a3850}
-.icon{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#0e1520;border:1px solid #223046;font-size:12px;color:var(--muted)}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Arturo de Nieves, PhD — Strategy & Operations · Decision Intelligence">
+  <meta name="twitter:description" content="Interpretable decision models and operational toolkits for high-stakes strategy and execution.">
 
-/* Lists */
-ul.clean{padding-left:18px;margin:8px 0 0}
-ul.clean li{margin:6px 0}
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-/* Projects */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media (max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.grid{grid-template-columns:1fr}}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.proj h3{margin:0 0 4px;font-size:18px}
-.proj .meta{color:var(--muted);font-size:13px;margin:0 0 8px}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.badge{font-size:12px;border:1px solid #243142;padding:4px 8px;border-radius:999px;color:var(--muted)}
+  <style>
+  :root{
+    --bg:#0b0f14; --card:#121821; --line:#1b2533; --ink:#e6edf3; --muted:#9fb0c0; --accent:#7cc7ff;
+    --muted-2:#7f8da0; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;padding:0;
+    background:radial-gradient(1200px 600px at -10% -20%,rgba(124,199,255,.10),transparent 60%),var(--bg);
+    color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1050px;margin:0 auto;padding:28px}
 
-/* Publications table */
-.table{width:100%;border-collapse:collapse;margin-top:6px}
-.table th,.table td{border-bottom:1px solid #223046;padding:10px 8px;text-align:left;font-size:14px}
-.table th{color:var(--muted)}
+  .header{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:18px}
+  .brand h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px}
+  .brand .tag{color:var(--muted);font-size:16px}
+  .meta{color:var(--muted-2);font-size:13px;margin-top:4px}
+  .sub{color:var(--muted);font-size:14px;margin-top:8px;max-width:740px}
+  .sub strong{color:var(--ink);font-weight:600}
+  .kicker{color:var(--muted-2);font-size:13px;margin-top:6px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);
+    background:#182230;color:var(--ink);text-decoration:none;transition:.15s transform,.15s box-shadow,.15s background
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+  .btn.primary{background:var(--accent);color:#0b0f14;border-color:transparent}
+  .btn .arrow{font-weight:700}
 
-/* Footer & responsive */
-.footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-@media (max-width:720px){
-  .brand h1{font-size:28px}
-  .header{grid-template-columns:1fr}
-  .actions{justify-content:flex-start}
-  .container{padding:22px}
-}
-</style>
+  .section{margin-top:22px}
+  .card{
+    background:linear-gradient(180deg,rgba(124,199,255,.06),transparent 50%),var(--card);
+    border:1px solid var(--line);border-radius:var(--radius);padding:18px
+  }
+  .card h2{margin:0 0 8px;font-size:20px}
+  .card p{margin:0}
+
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:999px;border:1px solid var(--line);
+    background:#0f1621;color:var(--ink);font-size:14px;transition:.15s transform,.15s background,.15s border-color
+  }
+  .pill:hover{transform:translateY(-1px);background:#141d2a;border-color:#2a3850}
+  .icon{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#0e1520;border:1px solid #223046;font-size:12px;color:var(--muted)}
+
+  ul.clean{padding-left:18px;margin:8px 0 0}
+  ul.clean li{margin:6px 0}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:920px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:620px){.grid{grid-template-columns:1fr}}
+  .proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .proj h3{margin:0 0 4px;font-size:18px}
+  .proj .meta{color:var(--muted);font-size:13px;margin:0 0 8px}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .badge{font-size:12px;border:1px solid #243142;padding:4px 8px;border-radius:999px;color:var(--muted)}
+
+  .table{width:100%;border-collapse:collapse;margin-top:6px}
+  .table th,.table td{border-bottom:1px solid #223046;padding:10px 8px;text-align:left;font-size:14px}
+  .table th{color:var(--muted)}
+
+  .footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  @media (max-width:720px){
+    .brand h1{font-size:28px}
+    .header{grid-template-columns:1fr}
+    .actions{justify-content:flex-start}
+    .container{padding:22px}
+  }
+  </style>
+</head>
 
 <body>
 <div class="container">
@@ -89,36 +100,30 @@ ul.clean li{margin:6px 0}
   <header class="header">
     <div class="brand">
       <h1>Arturo de Nieves, PhD</h1>
-      <div class="tag">Strategy & Operations · Decision Intelligence · Business Analytics</div>
+      <div class="tag">Strategy & Operations · Transformation · Decision Intelligence / Business Analytics</div>
+
       <div class="meta">Geneva · <a href="mailto:arturodenieves@gmail.com">arturodenieves@gmail.com</a> · EN/FR/ES/PT/IT</div>
+
+      <div class="sub">I build <strong>interpretable decision models</strong> and <strong>operational toolkits</strong> for high-stakes strategy and execution.</div>
+
+      <div class="kicker">Open to senior roles in Strategy & Operations, Transformation, Decision Intelligence/Analytics, and Policy Advisory (Europe/US).</div>
+      <div class="kicker">Currently: Senior Fellow in Residence, CCDP (IHEID) · UNHCR (SLWOP)</div>
     </div>
+
     <nav class="actions">
       <a class="btn primary" href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md" target="_blank" rel="noopener">Ethiopia pilot <span class="arrow">↗</span></a>
       <a class="btn" href="mailto:arturodenieves@gmail.com">Contact</a>
+      <a class="btn" href="https://journals.sagepub.com/doi/10.1177/00016993251344175" target="_blank" rel="noopener">BGM paper <span class="arrow">↗</span></a>
       <a class="btn" href="https://github.com/ArturoNGR" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <section class="section card">
     <h2>Featured: Ethiopia pilot (BGM applied)</h2>
-    <p>Evidence pack demonstrating the Bourdieusian Gravity Model (BGM) as an interpretable predictive framework for forecasting dyadic choices and behaviour in complex environments.</p>
+    <p>Evidence pack showing the Bourdieusian Gravity Model (BGM) as an interpretable choice-forecasting model for decision intelligence in complex environments.</p>
     <div class="links">
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Ethiopia technical evidence pack</a>
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://journals.sagepub.com/doi/10.1177/00016993251344175"><span class="icon">P</span> BGM paper (Acta Sociologica, 2025)</a>
-    </div>
-  </section>
-
-  <section class="section card">
-    <h2>Professional links</h2>
-    <div class="links">
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/"><span class="icon">in</span> LinkedIn</a>
-      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR"><span class="icon">GH</span> GitHub</a>
-      <a class="pill" target="_blank" rel="noopener"
-         href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao"><span class="icon">S</span> Google Scholar</a>
-      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098"><span class="icon">ID</span> ORCID</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Ethiopia technical evidence pack</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://journals.sagepub.com/doi/10.1177/00016993251344175"><span class="icon">P</span> BGM paper (Acta Sociologica, 2025)</a>
     </div>
   </section>
 
@@ -131,21 +136,28 @@ ul.clean li{margin:6px 0}
         <p>Applied case study and technical evidence demonstrating modelling, validation, and practical decision-support artefacts.</p>
         <div class="badges"><span class="badge">Applied</span><span class="badge">Interpretable</span><span class="badge">Evidence pack</span></div>
         <div class="links" style="margin-top:10px">
-          <a class="pill" target="_blank" rel="noopener"
-             href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Open</a>
+          <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR/bgm-ethiopia-evidence/blob/main/ETHIOPIA_TECH_EVIDENCE_PACK.md"><span class="icon">↗</span> Open</a>
         </div>
       </div>
+
       <div class="proj">
         <h3>Logistic BGM+ on PISA</h3>
         <div class="meta">Predictive matching of students to schools using E/C/S capitals</div>
-        <p>Country-level models with high AUC and P@1. Leak-free pipelines (student-grouped splits), validation suite, and synthetic demo. Private data/code remain private.</p>
-        <div class="badges"><span class="badge">AUC≈0.99</span><span class="badge">Leak-free</span><span class="badge">Validation</span></div>
+        <p>Country-level models with strong discrimination and P@1. Leak-free evaluation (student-grouped splits), validation suite, and synthetic demo.</p>
+        <div class="badges"><span class="badge">AUC up to ~0.99 (by country)</span><span class="badge">Leak-free</span><span class="badge">Reproducible</span></div>
+        <div class="links" style="margin-top:10px">
+          <a class="pill" target="_blank" rel="noopener" href="mailto:arturodenieves@gmail.com?subject=PISA%20BGM%2B%20methods%20and%20results%20summary"><span class="icon">✉</span> Request summary</a>
+        </div>
       </div>
+
       <div class="proj">
         <h3>Integrity Analytics Toolkit</h3>
-        <div class="meta">Controls, fraud risk, audit readiness</div>
-        <p>Rulesets for anomaly flags, partner risk registers, and internal-control checklists. Designed for handover to public administrations.</p>
+        <div class="meta">Risk & controls analytics · Audit readiness</div>
+        <p>Rulesets for anomaly flags, partner risk registers, and internal-control checklists designed for rapid adoption by operations and oversight teams.</p>
         <div class="badges"><span class="badge">Controls</span><span class="badge">Risk</span><span class="badge">Audit</span></div>
+        <div class="links" style="margin-top:10px">
+          <a class="pill" target="_blank" rel="noopener" href="mailto:arturodenieves@gmail.com?subject=Integrity%20Analytics%20Toolkit%20%E2%80%94%20sample%20artefacts"><span class="icon">✉</span> Request samples</a>
+        </div>
       </div>
     </div>
   </section>
@@ -179,11 +191,21 @@ ul.clean li{margin:6px 0}
   </section>
 
   <section class="section card">
+    <h2>Professional links</h2>
+    <div class="links">
+      <a class="pill" target="_blank" rel="noopener" href="https://www.linkedin.com/in/arturo-de-nieves-gutiérrez-de-rubalcava-phd-1aa647b9/"><span class="icon">in</span> LinkedIn</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://github.com/ArturoNGR"><span class="icon">GH</span> GitHub</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=LEkgEjcAAAAJ&amp;hl=es&amp;oi=ao"><span class="icon">S</span> Google Scholar</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2574-5098"><span class="icon">ID</span> ORCID</a>
+    </div>
+  </section>
+
+  <section class="section card">
     <h2>Highlights</h2>
     <ul class="clean">
       <li>Creator of the Bourdieusian Gravity Model (BGM), published in Acta Sociologica (2025).</li>
       <li>Ethiopia pilot: applied, interpretable forecasting of dyadic choices with a full evidence pack.</li>
-      <li>Integrity analytics and oversight toolkits supporting audit readiness and operational performance.</li>
+      <li>Decision intelligence, risk & controls analytics, and oversight toolkits supporting audit readiness and operational performance.</li>
     </ul>
   </section>
 
